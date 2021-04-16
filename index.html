@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+    <title>Category Classification</title>
+    <script src="fontAwe.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+</head>
+<body>
+    <!-- cards  -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 p-2">
+                    <div class="card card-common">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="text-left text-secondary">
+                                    <h3>Total Adjustments</h3>
+                                    <h4>753</h4>
+                                </div>
+                                <i class="fa fa-bar-chart fa-4x 
+                                text-info"></i>
+                            </div>
+                        </div>
+                        <div class="card-footer text-secondary d-flex">
+                            <a href="#" data-toggle="modal" title="click to view"
+                                data-placement="top" data-html="true"
+                            data-target="#more-info-one" class="details"><i class="fa fa-info-circle fa-button fa-2x mr-3"></i></a>
+                            <h6 class="mt-2">Show Defect Info</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 p-2">
+                    <div class="card card-common">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="text-left text-secondary align-items-center">
+                                    <h3>Maximum</h3>
+                                    <h4>Philppines: 503</h4>
+                                </div>
+                                <i class="fa fa-bar-chart fa-4x 
+                                text-danger"></i>          
+                            </div>
+                        </div>
+                        <div class="card-footer text-secondary d-flex">
+                            <a href="#" data-toggle="modal"
+                            data-target="#more-info-two" class="details"><i class="fa fa-table fa-button fa-2x mr-3" aria-hidden="true"></i></a>
+                            <h6 class="mt-2">Maximize Data</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 p-2">
+                    <div class="card card-common">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div class="text-left text-secondary align-items-center">
+                                    <h3>Minimum</h3>
+                                    <h4>Australia: 57</h4>
+                                </div>
+                                <i class="fa fa-bar-chart fa-4x 
+                                text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="card-footer text-secondary d-flex">
+                            <a href="#" data-toggle="modal"
+                            data-target="#more-info-three" class="details" id="one"><i class="fa fa-table fa-2x mr-3" aria-hidden="true"></i></a>
+                            <h6 class="mt-2">Maximize Data</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of cards -->
+    <!-- modal -->
+    <div class="modal fade" id="more-info-one">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="text-muted mb-4 text-center"><u>Header of Modal</u></h4>
+                    <button type="button" class="close" 
+                    data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseOne">
+                                Category 1
+                                </button>
+                            </div>
+                            <div class="collapse show" id="collapseOne"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseTwo">
+                                Category 2
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseTwo"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseThree">
+                                Category 3
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseThree"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseFour">
+                                Category 4
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseFour"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseFive">
+                                Category 5
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseFive"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" 
+                                data-toggle="collapse" data-target="#collapseSix">
+								Category 6
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseSix"data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                    Itaque commodi adipisci at vero perspiciatis 
+                                    eos dignissimos minus recusandae quia, 
+                                    incidunt maiores, labore tempore iusto iure!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger text-center"
+                    data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="more-info-two">
+        <div class="modal-dialog">
+            <div class="modal-content p-1">
+                <div class="modal-header">
+                    <h3 class="text-muted text-center mb-3">Header of Modal</h3>
+                    <button type="button" class="close" 
+                    data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">               
+                    <table class="table table-striped bg-light text-center">
+                        <thead>
+                            <tr class="text-muted">
+                                <th>#</th>
+                                <th>Category</th>
+                                <th>Count</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Category 1</td>
+                                <td>99</td>
+                                <td>25/05/2018</td> 
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Category 2</td>
+                                <td>67</td>
+                                <td>25/05/2018</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Category 3</td>
+                                <td>78</td>
+                                <td>25/05/2018</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Category 4</td>
+                                <td>90</td>
+                                <td>25/05/2018</td> 
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Category 5</td>
+                                <td>130</td>
+                                <td>25/05/2018</td> 
+                            </tr>                                        
+                        </tbody>
+                    </table>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"
+                    data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="more-info-three">
+        <div class="modal-dialog">
+            <div class="modal-content p-1">
+                <div class="modal-header">
+                    <h3 class="text-muted text-center mb-3">Header of Modal</h3>
+                    <button type="button" class="close" 
+                    data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped bg-light text-center">
+                        <thead>
+                            <tr>
+                                <th>1</th>
+                                <td>Category 1</td>
+                                <td>99</td>
+                                <td>25/05/2018</td> 
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>Category 2</td>
+                                <td>67</td>
+                                <td>25/05/2018</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>Category 3</td>
+                                <td>78</td>
+                                <td>25/05/2018</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>Category 4</td>
+                                <td>90</td>
+                                <td>25/05/2018</td> 
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>Category 5</td>
+                                <td>130</td>
+                                <td>25/05/2018</td> 
+                            </tr>                                   
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger"
+                    data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal -->
+    <!-- pie/column charts -->
+    <section>
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-xl-4 p-2">
+                    <div class="second_row">
+                        <h3 class="text-muted text-center"><u>Distribution on basis 1</u></h3>
+                        <div id="pieChart"></div>
+                    </div>
+                </div>
+                <div class="col-xl-8 p-2">
+                    <div class="second_row">
+                        <h3 class="text-muted text-center"><u>Distribution on basis 2</u></h3>
+                        <div id="barChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of pie/column charts -->
+    <!-- progess/line chart -->
+    <section>
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-xl-4 p-2">
+                    <div class="second_row px-2">
+                        <h3 class="text-center text-muted mb-4"><u>Progressive Description</u></h3>
+                            <h6 class="mb-3 p-2 progress-heads">Row name 1</h6>
+                            <div class="progress mb-4" style="height:20px">
+                                <div class="progress-bar progress-bar-striped
+                                font-weight-bold active"
+                                style="width:91%">
+                                    145
+                                </div>
+                            </div>
+                            <h6 class="mb-3 p-2 progress-heads">Row name 2</h6>
+                            <div class="progress mb-4" style="height:20px">
+                                <div class="progress-bar progress-bar-striped
+                                font-weight-bold bg-success active"
+                                style="width:82%">
+                                    135
+                                </div>
+                            </div>
+                            <h6 class="mb-3 p-2 progress-heads">Row name 3</h6>
+                            <div class="progress mb-4" style="height:20px">
+                                <div class="progress-bar progress-bar-striped
+                                font-weight-bold bg-danger active"
+                                style="width:67%">
+                                    111
+                                </div>
+                            </div>
+                            <h6 class="mb-3 p-2 progress-heads">Row name 4</h6>
+                            <div class="progress mb-4" style="height:20px">
+                                <div class="progress-bar progress-bar-striped
+                                font-weight-bold bg-info active"
+                                style="width:90%">
+                                    141
+                                </div>
+                            </div>
+                            <h6 class="mb-3 p-2 progress-heads">Row name 5</h6>
+                            <div class="progress mb-4" style="height:20px">
+                                <div class="progress-bar progress-bar-striped
+                                font-weight-bold bg-warning active"
+                                style="width:45%">
+                                    88
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 p-2">
+                    <div class="second_row">
+                        <h3 class="text-muted text-center"><u>Weekly Report</u></h3>
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of progress/line chart -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+        crossorigin="anonymous"></script>
+        <script src='script.js'></script>
+</body>
+</html>
